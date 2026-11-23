@@ -1,0 +1,206 @@
+{
+  "comparison": {
+    "n_paired_states": 50,
+    "same_state_arrays_verified": true,
+    "same_inference_settings_verified": true,
+    "versions": {
+      "3.3.7": {
+        "successes": 47,
+        "episodes": 50,
+        "success_rate": 0.94,
+        "wilson_95_interval": [
+          0.8378290831116182,
+          0.979385029651026
+        ],
+        "successes_within_250_steps": 47,
+        "start_on_ramekin": 50,
+        "start_xy_cm_mean": 1.4526882509335175,
+        "start_contacts_mean": 3.0
+      },
+      "3.8.1": {
+        "successes": 35,
+        "episodes": 50,
+        "success_rate": 0.7,
+        "wilson_95_interval": [
+          0.562496495355466,
+          0.8089644649911906
+        ],
+        "successes_within_250_steps": 35,
+        "start_on_ramekin": 0,
+        "start_xy_cm_mean": 3.721440003727918,
+        "start_contacts_mean": 1.0
+      }
+    },
+    "paired_outcomes": {
+      "both_success": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        17,
+        18,
+        20,
+        21,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        44,
+        46,
+        47,
+        48
+      ],
+      "only_3.3.7_success": [
+        3,
+        5,
+        10,
+        16,
+        19,
+        26,
+        27,
+        34,
+        36,
+        38,
+        40,
+        42,
+        45,
+        49
+      ],
+      "only_3.8.1_success": [
+        11,
+        15
+      ],
+      "neither_success": [
+        22
+      ]
+    },
+    "exact_mcnemar_two_sided_p": 0.004180908203125,
+    "success_rate_difference_3.8.1_minus_3.3.7": -0.24
+  },
+  "runs": {
+    "3.3.7": {
+      "models": {
+        "policy": {
+          "repo": "lerobot/VLA-JEPA-LIBERO",
+          "revision": "735d9f692981e286ade093b5046627eda876e5d0"
+        },
+        "qwen": {
+          "repo": "Qwen/Qwen3-VL-2B-Instruct",
+          "revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+        }
+      },
+      "mujoco": "3.3.7",
+      "lerobot_commit": "b31254e4f624502b5c12163650d0c8d1dbe6eaa9",
+      "hf_libero_base": "6422ca924565cb5f16a7f4c850bf3aaac2a3954e",
+      "task_id": 5,
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+      "instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "initial_state_sha256": "2d2c50b7dcbf861fffa94d576f217ed34153e57487010d7a109a220d4d97189b",
+      "script_sha256": "59be9fa4a4061ff26968af50554e6444c59778b5f1b3727994f0f9e8242ef5aa",
+      "policy_weights_sha256": "b2a163c16889f89fb1d5e570d95f5c62313c84d0ecebdd384cd87c35e9a8540c",
+      "batch_size": 5,
+      "episodes": 50,
+      "max_steps": 280,
+      "resolution": [
+        256,
+        256
+      ],
+      "settle_steps": 10,
+      "control_hz": 20,
+      "action_chunk": 7,
+      "action_steps": 7,
+      "noise_seed_formula": "1000000 + initial_state_id * 1000 + chunk_index; torch CPU generator",
+      "auxiliary_world_model_loaded": false,
+      "missing_inference_weights": [],
+      "skipped_auxiliary_weight_count": 743,
+      "verified_redundant_embedding_alias": true,
+      "packages": {
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128",
+        "transformers": "5.5.4",
+        "diffusers": "0.39.0",
+        "numpy": "2.2.6",
+        "robosuite": "1.4.1",
+        "safetensors": "0.8.0"
+      },
+      "gpu": "NVIDIA GeForce RTX 4060 Ti"
+    },
+    "3.8.1": {
+      "models": {
+        "policy": {
+          "repo": "lerobot/VLA-JEPA-LIBERO",
+          "revision": "735d9f692981e286ade093b5046627eda876e5d0"
+        },
+        "qwen": {
+          "repo": "Qwen/Qwen3-VL-2B-Instruct",
+          "revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+        }
+      },
+      "mujoco": "3.8.1",
+      "lerobot_commit": "b31254e4f624502b5c12163650d0c8d1dbe6eaa9",
+      "hf_libero_base": "6422ca924565cb5f16a7f4c850bf3aaac2a3954e",
+      "task_id": 5,
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+      "instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "initial_state_sha256": "2d2c50b7dcbf861fffa94d576f217ed34153e57487010d7a109a220d4d97189b",
+      "script_sha256": "59be9fa4a4061ff26968af50554e6444c59778b5f1b3727994f0f9e8242ef5aa",
+      "policy_weights_sha256": "b2a163c16889f89fb1d5e570d95f5c62313c84d0ecebdd384cd87c35e9a8540c",
+      "batch_size": 5,
+      "episodes": 50,
+      "max_steps": 280,
+      "resolution": [
+        256,
+        256
+      ],
+      "settle_steps": 10,
+      "control_hz": 20,
+      "action_chunk": 7,
+      "action_steps": 7,
+      "noise_seed_formula": "1000000 + initial_state_id * 1000 + chunk_index; torch CPU generator",
+      "auxiliary_world_model_loaded": false,
+      "missing_inference_weights": [],
+      "skipped_auxiliary_weight_count": 743,
+      "verified_redundant_embedding_alias": true,
+      "packages": {
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128",
+        "transformers": "5.5.4",
+        "diffusers": "0.39.0",
+        "numpy": "2.2.6",
+        "robosuite": "1.4.1",
+        "safetensors": "0.8.0"
+      },
+      "gpu": "NVIDIA GeForce RTX 4060 Ti"
+    }
+  },
+  "assets": {
+    "repo": "lerobot/libero-assets",
+    "revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6"
+  },
+  "environment_seed": "initial_state_id",
+  "inference_seed": 0,
+  "notes": [
+    "Original, unmodified LIBERO initial-state asset used for both versions.",
+    "Auxiliary world-model modules omitted because predict_action does not use them; all inference weights loaded and the tied embedding alias verified.",
+    "The engine-version comparison measures both reset and in-episode physics changes."
+  ]
+}
